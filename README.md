@@ -33,6 +33,7 @@ Things you may want to cover:
 - [Pagy](https://github.com/ddnexus/pagy)
 - [Sidekiq](https://github.com/sidekiq/sidekiq)
 - [Rubocop rails](https://github.com/rubocop/rubocop-rails)
+- [Hotwired](https://hotwired.dev/)
 - [Stimulus JS](https://stimulus.hotwired.dev/)
 - [Esbuild](https://esbuild.github.io/)
 - [Bootstrap 5](https://getbootstrap.com/)
