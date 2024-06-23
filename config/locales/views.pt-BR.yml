@@ -1,0 +1,7 @@
+pt-BR:
+  employee:
+    title:
+      index: 'Funcionários'
+      new: 'Novo funcionário'
+      edit: 'Editando funcionário'
+      show: 'Visualisando funcionário'

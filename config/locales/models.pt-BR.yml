@@ -1,0 +1,89 @@
+pt-BR:
+  activerecord:
+    models:
+      user:
+        one: "Usuário"
+        other: "Usuários"
+
+      profile:
+        one: "Perfil"
+        other: "Perfis"
+
+      employee:
+        one: "Funcionário"
+        other: "Funcionários"
+
+    attributes:
+
+      user:
+        full_name: "Nome"
+        email: "Email"
+        admin: "Administrador"
+        password: "Senha"
+        password_confirmation: "Confirmação da Senha"
+        current_password: "Senha Atual"
+        remember_me: "Entrar automaticamente"
+
+      profile:
+        full_name: 'Nome'
+        nickname: 'Apelido'
+        bio: 'Biográfia'
+        birthday: 'Aniversário'
+        avatar: ''
+        status: 'Status'
+        status_yes: 'Ativo'
+        status_no: 'Inativo'
+        user_id: 'Usuário'
+        user: 'Usuário'
+        observation: 'Observação'
+
+      employee:
+        first_name: 'Nome'
+        last_name: 'Sobrenome'
+        cpf: 'CPF'
+        email: 'Email'
+        gender: 'Gênero'
+        birth_date: 'Aniversário'
+        hire_date: 'Data Contratação'
+        dismissal_date: 'Data Demissão'
+        department: 'Departamento'
+        salary: 'Salário'
+        discount_inss: 'Desconto INSS'
+        status: 'Status'
+        status_yes: 'Ativo'
+        status_no: 'Inativo'
+
+      address:
+        kind_address: 'Tipo endereço'
+        kind_address_residential: 'Residencial'
+        kind_address_commercial: 'Comercial'
+        kind_address_placeholder: ''
+        zip_code: 'CEP'
+        zip_code_placeholder: ''
+        street: 'Rua'
+        street_placeholder: ''
+        number: 'Número'
+        number_placeholder: ''
+        complement: 'Complemento'
+        complement_placeholder: ''
+        neighborhood: 'Bairro'
+        neighborhood_placeholder: ''
+        city: 'Cidade'
+        city_placeholder: ''
+        state: 'Estado'
+        state_placeholder: ''
+
+      phone:
+        kind: 'Tipo telefone'
+        phone: 'Telefone'
+        phone_placeholder: ''
+        number: 'Número'
+        note: 'Anotação'
+        status: 'Status'
+
+    errors:
+      template:
+        header:
+          one:   "1 erro impediu que este(a) %{model} fosse salvo(a)"
+          other: "%{count} erros impediram que esse(a) %{model} fosse salvo(a)"
+        body:    "Existem problemas nos seguintes campos:"
