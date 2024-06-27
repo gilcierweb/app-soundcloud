@@ -1,2 +1,23 @@
-<h1>Home#show</h1>
-<p>Find me in app/views/home/show.html.erb</p>
+<div class="px-4 py-5 my-5 text-center">
+
+  <div class="row">
+    <div class="col">
+      <div class="card m-4 shadow rounded" data-controller="audio-player" data-audio-player-url-value="<%= asset_path('audio.mp3') %>">
+        <img src="https://cdn.dummyjson.com/recipe-images/1.webp" alt="" class="img-fluid bd-placeholder-img card-img-top">
+        <div class="card-body">
+          <h3 class="card-text"> Songs Albums </h3>
+
+          <div data-audio-player-target="preview" class="m-4"></div>
+
+          <button class="btn btn-primary" data-action="audio-player#play"><i class="fa-solid fa-play"></i></button>
+          <button class="btn btn-primary" data-action="audio-player#pause"><i class="fa-solid fa-pause"></i></button>
+          <button class="btn btn-primary" data-action="audio-player#reset"><i class="fa-solid fa-eject"></i></button>
+          <button class="btn btn-primary" data-action="audio-player#muted"><i class="fa-solid fa-volume-xmark"></i>
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,37 @@
+<div id="<%= dom_id album %>">
+  <p>
+    <strong>Itle:</strong>
+    <%= album.itle %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= album.description %>
+  </p>
+
+  <p>
+    <strong>Release:</strong>
+    <%= album.release %>
+  </p>
+
+  <p>
+    <strong>Cover:</strong>
+    <%= link_to album.cover.filename, album.cover if album.cover.attached? %>
+  </p>
+
+  <p>
+    <strong>Cover back:</strong>
+    <%= link_to album.cover_back.filename, album.cover_back if album.cover_back.attached? %>
+  </p>
+
+  <p>
+    <strong>Rating:</strong>
+    <%= album.rating %>
+  </p>
+
+  <p>
+    <strong>Artist:</strong>
+    <%= album.artist_id %>
+  </p>
+
+</div>

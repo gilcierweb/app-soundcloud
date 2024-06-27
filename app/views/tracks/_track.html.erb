@@ -1,0 +1,27 @@
+<div id="<%= dom_id track %>">
+  <p>
+    <strong>Name:</strong>
+    <%= track.name %>
+  </p>
+
+  <p>
+    <strong>Lyric:</strong>
+    <%= track.lyric %>
+  </p>
+
+  <p>
+    <strong>Audio:</strong>
+    <%= link_to track.audio.filename, track.audio if track.audio.attached? %>
+  </p>
+
+  <p>
+    <strong>Album:</strong>
+    <%= track.album_id %>
+  </p>
+
+  <p>
+    <strong>Gender:</strong>
+    <%= track.gender_id %>
+  </p>
+
+</div>

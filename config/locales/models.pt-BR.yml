@@ -9,9 +9,9 @@ pt-BR:
         one: "Perfil"
         other: "Perfis"
 
-      employee:
-        one: "Funcionário"
-        other: "Funcionários"
+      album:
+        one: "Album"
+        other: "Albums"
 
     attributes:
 
@@ -73,13 +73,20 @@ pt-BR:
         state: 'Estado'
         state_placeholder: ''
 
-      phone:
-        kind: 'Tipo telefone'
-        phone: 'Telefone'
-        phone_placeholder: ''
-        number: 'Número'
-        note: 'Anotação'
-        status: 'Status'
+      album:
+        title: 'Nome'
+        description: 'Letra'
+        rating: 'Rating'
+        release: 'Data de lançamento'
+        artist_id: 'Artista'
+        cover: 'Capa'
+        cover_back: 'Contra Capa'
+
+      track:
+        name: 'Nome'
+        lyric: 'Letra'
+        album_id: 'Album'
+        gender_id: 'Gênero'
 
     errors:
       template:

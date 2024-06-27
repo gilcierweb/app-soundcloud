@@ -1,0 +1,27 @@
+<div class="row g-3">
+  <div class="col-md-6 form-group">
+    <%= form.label :artist_id, class: 'form-label' %>
+    <%= form.select(:artist_id, Gender.select_list(), { :prompt => t('form.select') }, { class: 'form-select form-select-lg select2-input', disabled: nil, data: { target: 'city-load.city', } }) %>
+  </div>
+
+  <div class="col-md-6 form-group">
+    <%= form.label :title, class: 'form-label' %>
+    <%= form.text_field :title, class: 'form-control form-control-lg' %>
+  </div>
+
+  <div class="col-md-6 form-group">
+    <%= form.label :release, class: 'form-label' %>
+    <%= form.text_field :release, class: 'form-control form-control-lg' %>
+  </div>
+
+  <div class="col-md-6 form-group">
+    <%= form.label :rating, class: 'form-label' %>
+    <%= form.text_field :rating, class: 'form-control form-control-lg' %>
+  </div>
+
+  <div class="col-md-12 form-group">
+    <%= form.label :description, class: 'form-label' %>
+    <%= form.text_area :description, class: 'form-control form-control-lg' %>
+  </div>
+
+</div>

@@ -168,3 +168,8 @@ esbuild@^0.21.5:
     "@esbuild/win32-arm64" "0.21.5"
     "@esbuild/win32-ia32" "0.21.5"
     "@esbuild/win32-x64" "0.21.5"
+
+wavesurfer.js@^7.8.0:
+  version "7.8.0"
+  resolved "https://registry.yarnpkg.com/wavesurfer.js/-/wavesurfer.js-7.8.0.tgz#47eac03bc421107a060915aa8fa41dc251db4b15"
+  integrity sha512-V9SIfE08VtSIl1KYHi+i+52gytEIxk0nDKlV98fjrK0UW+z37ojImgsYINEV015syLB9sZVAXDdGI8F4xmU7KQ==

@@ -1,0 +1,55 @@
+<%= form_with(model: album) do |form| %>
+  <% if album.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(album.errors.count, "error") %> prohibited this album from being saved:</h2>
+
+      <ul>
+        <% album.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="row g-3">
+
+    <div class="col-md-12">
+      <%= form.label :title, class: 'form-label' %>
+      <%= form.text_field :title, class: 'form-control form-control-lg' %>
+    </div>
+
+    <div class="col-md-12">
+      <%= form.label :description, class: 'form-label' %>
+      <%= form.text_area :description, class: 'form-control form-control-lg' %>
+    </div>
+
+    <div class="col-md-4">
+      <%= form.label :release, class: 'form-label' %>
+      <%= form.date_field :release, class: 'form-control form-control-lg' %>
+    </div>
+
+    <div class="col-md-4">
+      <%= form.label :rating, class: 'form-label' %>
+      <%= form.number_field :rating, class: 'form-control form-control-lg' %>
+    </div>
+
+    <div class="col-md-4">
+      <%= form.label :artist_id, class: 'form-label' %>
+      <%= form.select(:artist_id, Artist.select_list(), { :prompt => t('form.select') }, { class: 'form-select form-select-lg select2-input', disabled: nil, data: { target: 'city-load.city', } }) %>
+    </div>
+
+    <div class="col-md-6">
+      <%= form.label :cover, class: 'form-label' %>
+      <%= form.file_field :cover, class: 'form-control form-control-lg' %>
+    </div>
+
+    <div class="col-md-6">
+      <%= form.label :cover_back, class: 'form-label' %>
+      <%= form.file_field :cover_back, class: 'form-control form-control-lg' %>
+    </div>
+
+    <div>
+      <%= form.submit t('form.submit'), class: "btn btn-primary" %>
+    </div>
+
+  </div>
+<% end %>
