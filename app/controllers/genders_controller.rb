@@ -1,4 +1,4 @@
-class GendersController < ApplicationController
+class GendersController < AdminController
   before_action :set_gender, only: %i[ show edit update destroy ]
 
   # GET /genders or /genders.json

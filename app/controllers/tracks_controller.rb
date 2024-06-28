@@ -1,4 +1,4 @@
-class TracksController < ApplicationController
+class TracksController < AdminController
   before_action :set_track, only: %i[ show edit update destroy ]
 
   # GET /tracks or /tracks.json
