@@ -17,7 +17,7 @@
               <h4>Faixas:</h4>
               <div class="list-group">
                 <% row.tracks.each do |row| %>
-                  <%= link_to(row.try(:name), song_path(row), title: row.try(:name), class: 'list-group-item list-group-item-action') %>
+                  <%= link_to(row.try(:name).truncate(100), song_path(row), title: row.try(:name), class: 'list-group-item list-group-item-action') %>
                 <% end %>
               </div>
             </div>
