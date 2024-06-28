@@ -4,7 +4,7 @@
       <div class="col">
         <div class="card shadow-sm">
 
-          <%= image_tag(row.cover, class: 'bd-placeholder-img card-img-top') if row.cover.attached? %>
+          <%= image_tag(url_for(row.cover), class: 'bd-placeholder-img card-img-top') if row.cover.attached? %>
 
           <div class="card-body">
             <p class="card-text"><%= row.try(:title) %></p>
