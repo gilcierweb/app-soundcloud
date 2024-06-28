@@ -1,8 +1,8 @@
 <%= render @track %>
 
 <div>
-  <%= link_to "Edit this track", edit_track_path(@track) %> |
-  <%= link_to "Back to tracks", tracks_path %>
+  <%= link_to "Edit this track", edit_track_path(@track), class: 'btn btn-primary' %> |
+  <%= link_to "Back to tracks", tracks_path, class: 'btn btn-default' %>
 
-  <%= button_to "Destroy this track",@track, method: :delete %>
+  <%= button_to "Destroy this track",@track, method: :delete, class: 'btn btn-danger' %>
 </div>
