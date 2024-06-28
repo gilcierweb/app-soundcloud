@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :artists
   resources :genders
   resources :tracks
+  resources :songs, only: [:index, :show]
   resources :home, only: [:index, :show]
 
   devise_for :users
