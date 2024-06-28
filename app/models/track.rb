@@ -24,4 +24,6 @@ class Track < ApplicationRecord
   belongs_to :album
   belongs_to :gender
   has_one_attached :audio
+
+  validates_presence_of :name
 end

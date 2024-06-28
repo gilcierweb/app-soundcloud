@@ -25,6 +25,7 @@ class Album < ApplicationRecord
   has_one_attached :cover
   has_one_attached :cover_back
 
+  validates_presence_of :title, :artist_id
   def self.select_list()
     self.all.collect { |row| [row.title, row.id] }
   end

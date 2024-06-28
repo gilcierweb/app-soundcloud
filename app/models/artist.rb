@@ -8,7 +8,7 @@
 #  updated_at :datetime         not null
 #
 class Artist < ApplicationRecord
-
+  validates_presence_of :name
   def self.select_list()
     self.all.collect { |row| [row.name, row.id] }
   end
