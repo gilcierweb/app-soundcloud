@@ -15,7 +15,8 @@
       <% end %>
 
       <div class="mb-3">
-        <%= f.label :password,class: 'form-label mb-2 text-muted' %> <i><%= t('devise.registrations.form.text.password') %></i>
+        <%= f.label :password, class: 'form-label mb-2 text-muted' %>
+        <i><%= t('devise.registrations.form.text.password') %></i>
         <%= f.password_field :password, autocomplete: "new-password", class: 'form-control form-control-lg' %>
         <% if @minimum_password_length %>
 
