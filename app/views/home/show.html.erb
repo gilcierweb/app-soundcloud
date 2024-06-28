@@ -2,10 +2,10 @@
 
   <div class="row">
     <div class="col">
-      <div class="card m-4 shadow rounded" data-controller="audio-player" data-audio-player-url-value="<%= asset_path('audio.mp3') %>">
-        <img src="https://cdn.dummyjson.com/recipe-images/1.webp" alt="" class="img-fluid bd-placeholder-img card-img-top">
+      <div class="card m-4 shadow rounded" data-controller="audio-player" data-audio-player-url-value="<%= url_for(@track.audio) %>">
+        <%= image_tag(@track.album.cover, class: 'img-fluid bd-placeholder-img card-img-top') if @track.album.cover.attached? %>
         <div class="card-body">
-          <h3 class="card-text"> Songs Albums </h3>
+          <h3 class="card-text"> <%= @track.name %></h3>
 
           <div data-audio-player-target="preview" class="m-4"></div>
 

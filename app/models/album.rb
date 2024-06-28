@@ -21,11 +21,12 @@
 #
 class Album < ApplicationRecord
   belongs_to :artist
+  has_many :tracks, dependent: :destroy
   has_one_attached :cover
   has_one_attached :cover_back
 
   def self.select_list()
-    self.all.collect { |row| [row.name, row.id] }
+    self.all.collect { |row| [row.title, row.id] }
   end
 
 end

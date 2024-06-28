@@ -28,7 +28,7 @@ RSpec.describe "/albums", type: :request do
   describe "GET /index" do
     it "renders a successful response" do
       Album.create! valid_attributes
-      get _albums_url
+      get albums_url
       expect(response).to be_successful
     end
   end
@@ -43,7 +43,7 @@ RSpec.describe "/albums", type: :request do
 
   describe "GET /new" do
     it "renders a successful response" do
-      get new__album_url
+      get new_album_url
       expect(response).to be_successful
     end
   end
@@ -51,7 +51,7 @@ RSpec.describe "/albums", type: :request do
   describe "GET /edit" do
     it "renders a successful response" do
       album = Album.create! valid_attributes
-      get edit__album_url(album)
+      get edit_album_url(album)
       expect(response).to be_successful
     end
   end
@@ -60,26 +60,26 @@ RSpec.describe "/albums", type: :request do
     context "with valid parameters" do
       it "creates a new Album" do
         expect {
-          post _albums_url, params: { album: valid_attributes }
+          post albums_url, params: { album: valid_attributes }
         }.to change(Album, :count).by(1)
       end
 
       it "redirects to the created album" do
-        post _albums_url, params: { album: valid_attributes }
-        expect(response).to redirect_to(_album_url(Album.last))
+        post albums_url, params: { album: valid_attributes }
+        expect(response).to redirect_to(album_url(Album.last))
       end
     end
 
     context "with invalid parameters" do
       it "does not create a new Album" do
         expect {
-          post _albums_url, params: { album: invalid_attributes }
+          post albums_url, params: { album: invalid_attributes }
         }.to change(Album, :count).by(0)
       end
 
     
       it "renders a response with 422 status (i.e. to display the 'new' template)" do
-        post _albums_url, params: { album: invalid_attributes }
+        post albums_url, params: { album: invalid_attributes }
         expect(response).to have_http_status(:unprocessable_entity)
       end
     
@@ -94,14 +94,14 @@ RSpec.describe "/albums", type: :request do
 
       it "updates the requested album" do
         album = Album.create! valid_attributes
-        patch _album_url(album), params: { album: new_attributes }
+        patch album_url(album), params: { album: new_attributes }
         album.reload
         skip("Add assertions for updated state")
       end
 
       it "redirects to the album" do
         album = Album.create! valid_attributes
-        patch _album_url(album), params: { album: new_attributes }
+        patch album_url(album), params: { album: new_attributes }
         album.reload
         expect(response).to redirect_to(album_url(album))
       end
@@ -111,7 +111,7 @@ RSpec.describe "/albums", type: :request do
     
       it "renders a response with 422 status (i.e. to display the 'edit' template)" do
         album = Album.create! valid_attributes
-        patch _album_url(album), params: { album: invalid_attributes }
+        patch album_url(album), params: { album: invalid_attributes }
         expect(response).to have_http_status(:unprocessable_entity)
       end
     
@@ -122,14 +122,14 @@ RSpec.describe "/albums", type: :request do
     it "destroys the requested album" do
       album = Album.create! valid_attributes
       expect {
-        delete _album_url(album)
+        delete album_url(album)
       }.to change(Album, :count).by(-1)
     end
 
     it "redirects to the albums list" do
       album = Album.create! valid_attributes
-      delete _album_url(album)
-      expect(response).to redirect_to(_albums_url)
+      delete album_url(album)
+      expect(response).to redirect_to(albums_url)
     end
   end
 end

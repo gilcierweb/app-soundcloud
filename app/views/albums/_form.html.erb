@@ -40,11 +40,13 @@
     <div class="col-md-6">
       <%= form.label :cover, class: 'form-label' %>
       <%= form.file_field :cover, class: 'form-control form-control-lg' %>
+      <%= image_tag(album.cover, class: 'img-fluid') if album.cover.attached? %>
     </div>
 
     <div class="col-md-6">
       <%= form.label :cover_back, class: 'form-label' %>
       <%= form.file_field :cover_back, class: 'form-control form-control-lg' %>
+      <%= image_tag(album.cover_back, class: 'img-fluid') if album.cover_back.attached? %>
     </div>
 
     <div>

@@ -10,7 +10,7 @@ RSpec.describe "genders/new", type: :view do
   it "renders new gender form" do
     render
 
-    assert_select "form[action=?][method=?]", _genders_path, "post" do
+    assert_select "form[action=?][method=?]", genders_path, "post" do
 
       assert_select "input[name=?]", "gender[name]"
     end

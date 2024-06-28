@@ -28,7 +28,7 @@ RSpec.describe "/genders", type: :request do
   describe "GET /index" do
     it "renders a successful response" do
       Gender.create! valid_attributes
-      get _genders_url
+      get genders_url
       expect(response).to be_successful
     end
   end
@@ -36,7 +36,7 @@ RSpec.describe "/genders", type: :request do
   describe "GET /show" do
     it "renders a successful response" do
       gender = Gender.create! valid_attributes
-      get _gender_url(gender)
+      get gender_url(gender)
       expect(response).to be_successful
     end
   end
@@ -51,7 +51,7 @@ RSpec.describe "/genders", type: :request do
   describe "GET /edit" do
     it "renders a successful response" do
       gender = Gender.create! valid_attributes
-      get edit__gender_url(gender)
+      get edit_gender_url(gender)
       expect(response).to be_successful
     end
   end
@@ -65,21 +65,21 @@ RSpec.describe "/genders", type: :request do
       end
 
       it "redirects to the created gender" do
-        post _genders_url, params: { gender: valid_attributes }
-        expect(response).to redirect_to(_gender_url(Gender.last))
+        post genders_url, params: { gender: valid_attributes }
+        expect(response).to redirect_to(gender_url(Gender.last))
       end
     end
 
     context "with invalid parameters" do
       it "does not create a new Gender" do
         expect {
-          post _genders_url, params: { gender: invalid_attributes }
+          post genders_url, params: { gender: invalid_attributes }
         }.to change(Gender, :count).by(0)
       end
 
     
       it "renders a response with 422 status (i.e. to display the 'new' template)" do
-        post _genders_url, params: { gender: invalid_attributes }
+        post genders_url, params: { gender: invalid_attributes }
         expect(response).to have_http_status(:unprocessable_entity)
       end
     
@@ -94,14 +94,14 @@ RSpec.describe "/genders", type: :request do
 
       it "updates the requested gender" do
         gender = Gender.create! valid_attributes
-        patch _gender_url(gender), params: { gender: new_attributes }
+        patch gender_url(gender), params: { gender: new_attributes }
         gender.reload
         skip("Add assertions for updated state")
       end
 
       it "redirects to the gender" do
         gender = Gender.create! valid_attributes
-        patch _gender_url(gender), params: { gender: new_attributes }
+        patch gender_url(gender), params: { gender: new_attributes }
         gender.reload
         expect(response).to redirect_to(gender_url(gender))
       end
@@ -111,7 +111,7 @@ RSpec.describe "/genders", type: :request do
     
       it "renders a response with 422 status (i.e. to display the 'edit' template)" do
         gender = Gender.create! valid_attributes
-        patch _gender_url(gender), params: { gender: invalid_attributes }
+        patch gender_url(gender), params: { gender: invalid_attributes }
         expect(response).to have_http_status(:unprocessable_entity)
       end
     
@@ -122,13 +122,13 @@ RSpec.describe "/genders", type: :request do
     it "destroys the requested gender" do
       gender = Gender.create! valid_attributes
       expect {
-        delete _gender_url(gender)
+        delete gender_url(gender)
       }.to change(Gender, :count).by(-1)
     end
 
     it "redirects to the genders list" do
       gender = Gender.create! valid_attributes
-      delete _gender_url(gender)
+      delete gender_url(gender)
       expect(response).to redirect_to(_genders_url)
     end
   end

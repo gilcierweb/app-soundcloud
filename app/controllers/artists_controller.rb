@@ -25,7 +25,7 @@ class ArtistsController < ApplicationController
 
     respond_to do |format|
       if @artist.save
-        format.html { redirect_to _artist_url(@artist), notice: "Artist was successfully created." }
+        format.html { redirect_to artist_url(@artist), notice: "Artist was successfully created." }
         format.json { render :show, status: :created, location: @artist }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,7 @@ class ArtistsController < ApplicationController
   def update
     respond_to do |format|
       if @artist.update(artist_params)
-        format.html { redirect_to _artist_url(@artist), notice: "Artist was successfully updated." }
+        format.html { redirect_to artist_url(@artist), notice: "Artist was successfully updated." }
         format.json { render :show, status: :ok, location: @artist }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,7 +52,7 @@ class ArtistsController < ApplicationController
     @artist.destroy!
 
     respond_to do |format|
-      format.html { redirect_to _artists_url, notice: "Artist was successfully destroyed." }
+      format.html { redirect_to artists_url, notice: "Artist was successfully destroyed." }
       format.json { head :no_content }
     end
   end

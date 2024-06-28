@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "albums/edit", type: :view do
   let(:album) {
     Album.create!(
-      itle: "MyString",
+      title: "MyString",
       description: "MyText",
       cover: nil,
       cover_back: nil,
@@ -21,7 +21,7 @@ RSpec.describe "albums/edit", type: :view do
 
     assert_select "form[action=?][method=?]", album_path(album), "post" do
 
-      assert_select "input[name=?]", "album[itle]"
+      assert_select "input[name=?]", "album[title]"
 
       assert_select "textarea[name=?]", "album[description]"
 

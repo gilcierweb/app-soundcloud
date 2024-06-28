@@ -14,7 +14,7 @@ RSpec.describe "tracks/new", type: :view do
   it "renders new track form" do
     render
 
-    assert_select "form[action=?][method=?]", _tracks_path, "post" do
+    assert_select "form[action=?][method=?]", tracks_path, "post" do
 
       assert_select "input[name=?]", "track[name]"
 
