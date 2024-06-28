@@ -1,8 +1,8 @@
 <%= render @gender %>
 
 <div>
-  <%= link_to "Edit this gender", edit_gender_path(@gender) %> |
-  <%= link_to "Back to genders", genders_path %>
+  <%= link_to "Edit this gender", edit_gender_path(@gender), class: 'btn btn-primary' %> |
+  <%= link_to "Back to genders", genders_path, class: 'btn btn-default' %>
 
-  <%= button_to "Destroy this gender", @gender, method: :delete %>
+  <%= button_to "Destroy this gender", @gender, method: :delete, class: 'btn btn-danger' %>
 </div>

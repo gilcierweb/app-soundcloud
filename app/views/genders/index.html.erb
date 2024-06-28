@@ -4,7 +4,7 @@
   <% @genders.each do |gender| %>
     <%= render gender %>
     <p>
-      <%= link_to "Show this gender", gender %>
+      <%= link_to "Show this gender", gender, class: 'btn btn-info' %>
     </p>
   <% end %>
 </div>
