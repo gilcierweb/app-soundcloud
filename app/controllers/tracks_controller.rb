@@ -3,7 +3,7 @@ class TracksController < AdminController
 
   # GET /tracks or /tracks.json
   def index
-    @tracks = Track.all
+    @pagy, @tracks = pagy(Track.all)
   end
 
   # GET /tracks/1 or /tracks/1.json

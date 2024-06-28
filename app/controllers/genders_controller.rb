@@ -3,7 +3,7 @@ class GendersController < AdminController
 
   # GET /genders or /genders.json
   def index
-    @genders = Gender.all
+    @pagy, @genders = pagy(Gender.all)
   end
 
   # GET /genders/1 or /genders/1.json
