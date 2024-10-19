@@ -23,6 +23,16 @@ Things you may want to cover:
 
 * ...
 
+Homepage: 
+![alt text](./app/assets/images/homepage.png "Homepage")
+
+---
+
+Detail play sound page:
+![alt text](./app/assets/images/detail.png "Detail play sound page")
+
+---
+
 ### Skills
 
 - [Ruby](https://www.ruby-lang.org/)
