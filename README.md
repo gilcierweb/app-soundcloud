@@ -93,6 +93,9 @@ xdg-open coverage/index.html
 rake stats # or
 rails stats
 
+rake routes # or
+rails routes
+
 ```
 
 https://gilcierweb.com.br
